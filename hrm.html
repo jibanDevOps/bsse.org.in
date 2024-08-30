@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/css/admission.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="js/admissionform.js" defer></script>
+    <title>Admission</title>
+  </head>
+  <body class="container">
+    <div class="card p-3 shadow">
+      <h2 class="text-center p-3">Admission form</h2>
+      <nav>
+        <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+          <button
+            class="nav-link active"
+            id="nav-home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-home"
+            type="button"
+            role="tab"
+            aria-controls="nav-home"
+            aria-selected="true"
+          >
+            Personal Detail
+          </button>
+          <button
+            class="nav-link"
+            id="nav-profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-profile"
+            type="button"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false"
+          >
+            Work Experience
+          </button>
+          <button
+            class="nav-link"
+            id="nav-contact-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-contact"
+            type="button"
+            role="tab"
+            aria-controls="nav-contact"
+            aria-selected="false"
+          >
+            Upload Document
+          </button>
+        </div>
+      </nav>
+      <div class="tab-content p-3 border bg-light" id="nav-tabContent">
+        <div
+          class="tab-pane fade active show"
+          id="nav-home"
+          role="tabpanel"
+          aria-labelledby="nav-home-tab"
+        >
+          <form id="personalForm">
+            <!-- Personal Information Fields -->
+            <fieldset>
+              <legend>Personal Information</legend>
+              <div class="container" style="padding-top: 20px;">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label for="title">Title *</label><br />
+                    <select id="title" name="title" class="form-control">
+                      <option value="select">SELECT</option>
+                      <option value="Mr">Mr</option>
+                      <option value="Ms">Ms</option>
+                      <option value="Mrs">Mrs</option>
+                      <option value="Dr">Dr</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="firstName">Name *</label><br />
+                    <input type="text" id="Name" name="Name" class="form-control" required />
+                  </div>
+                  <div class="col-md-4">
+                    <label for="dob">Date of Birth *</label><br />
+                    <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY" class="form-control" required />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="container" style="padding-top: 20px;">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label for="gender">Gender *</label><br />
+                    <select id="gender" name="gender" class="form-control">
+                      <option value="select">SELECT GENDER</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="email">Email ID *</label><br />
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" class="form-control" required />
+                  </div>
+                  <div class="col-md-4">
+                    <label for="mobile">Mobile Number *</label><br />
+                    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="+919717692555" class="form-control" required />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12" style="padding-top: 25px;">
+                    <label for="tshirtSize">What is your T-shirt size? *</label><br />
+                    <select id="tshirtSize" name="tshirtSize" style="width: 225px; height: 45px;" class="form-control">
+                      <option value="select">SELECT</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                      <option value="XXXL">XXXL</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+            </fieldset>
+            <div class="container">
+                <fieldset>
+                  <legend>Address for Correspondence</legend>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="country">Country *</label><br />
+                      <input type="text" id="country" name="country" placeholder="Country" style="width: 100%; height: 45px;" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="State">State *</label><br />
+                      <select id="state" name="state" style="width: 100%; height: 45px;" class="form-control">
+                        <option value="select">Select State</option>
+                        <!-- Add all your state options here -->
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                          <option value="Assam">Assam</option>
+                          <option value="Bihar">Bihar</option>
+                          <option value="Chhattisgarh">Chhattisgarh</option>
+                          <option value="Goa">Goa</option>
+                          <option value="Gujarat">Gujarat</option>
+                          <option value="Haryana">Haryana</option>
+                          <option value="Himachal Pradesh">Himachal Pradesh</option>
+                          <option value="Jharkhand">Jharkhand</option>
+                          <option value="Karnataka">Karnataka</option>
+                          <option value="Kerala">Kerala</option>
+                          <option value="Madhya Pradesh">Madhya Pradesh</option>
+                          <option value="Maharashtra">Maharashtra</option>
+                          <option value="Manipur">Manipur</option>
+                          <option value="Meghalaya">Meghalaya</option>
+                          <option value="Mizoram">Mizoram</option>
+                          <option value="Nagaland">Nagaland</option>
+                          <option value="Odisha">Odisha</option>
+                          <option value="Punjab">Punjab</option>
+                          <option value="Rajasthan">Rajasthan</option>
+                          <option value="Sikkim">Sikkim</option>
+                          <option value="Tamil Nadu">Tamil Nadu</option>
+                          <option value="Telangana">Telangana</option>
+                          <option value="Tripura">Tripura</option>
+                          <option value="Uttar Pradesh">Uttar Pradesh</option>
+                          <option value="Uttarakhand">Uttarakhand</option>
+                          <option value="West Bengal">West Bengal</option>
+
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12" style="padding-top: 25px;">
+                      <label for="houseNo">House No./Flat No. *</label><br />
+                      <input type="text" id="houseNo" name="houseNo" placeholder="EXAMPLE: H.NO. 43-A" style="width: 100%; height: 45px;" required />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12" style="padding-top: 25px;">
+                      <label for="area">Apartment/Road/Area *</label><br />
+                      <input type="text" id="area" name="area" placeholder="EXAMPLE: ORCHID APARTMENTS, SECTOR 46, SHAKTI NAGAR" style="width: 100%; height: 45px;" required />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12" style="padding-top: 25px;">
+                      <label for="landmark">Landmark</label><br />
+                      <input type="text" id="landmark" name="landmark" placeholder="EXAMPLE: NEAR APOLLO HOSPITAL" style="width: 100%; height: 45px;" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12" style="padding-top: 25px;">
+                      <label for="pincode">Pin Code *</label><br />
+                      <input type="text" id="pincode" name="pincode" style="width: 40%; height: 45px;" required />
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              
+
+            <!-- Your existing HTML code for personal details -->
+            <input
+              type="button"
+              class="btn btn-primary"
+              value="Next"
+              onclick="nextTab('nav-profile-tab')"
+            />
+          </form>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="nav-profile"
+          role="tabpanel"
+          aria-labelledby="nav-profile-tab"
+        >
+          <form id="workForm">
+            <!-- Employment Details Fields -->
+
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">COMPANY</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            name="company1"
+                            class="form-control"
+                            required
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            name="company2"
+                            class="form-control"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            name="company3"
+                            class="form-control"
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">DESIGNATION</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            name="designation1"
+                            class="form-control"
+                            required
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            name="designation2"
+                            class="form-control"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            name="designation3"
+                            class="form-control"
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">SALARY (CTC)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input
+                            type="number"
+                            name="salary1"
+                            class="form-control"
+                            required
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="number"
+                            name="salary2"
+                            class="form-control"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="number"
+                            name="salary3"
+                            class="form-control"
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">TOTAL EXPERIENCE (IN MONTHS)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input
+                            type="number"
+                            name="experience1"
+                            class="form-control"
+                            required
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="number"
+                            name="experience2"
+                            class="form-control"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="number"
+                            name="experience3"
+                            class="form-control"
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Your existing HTML code for work experience -->
+            <input
+              type="button"
+              class="btn btn-primary"
+              value="Next"
+              onclick="nextTab('nav-contact-tab')"
+            />
+          </form>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="nav-contact"
+          role="tabpanel"
+          aria-labelledby="nav-contact-tab"
+        >
+          <form id="uploadForm">
+            <!-- Upload Document Fields -->
+            <div>
+                <label for="essay">Write an essay on: why you should be considered for enrollment in Bugfix Education & How do you think the program can help benefit you or fulfil your aspirations? </label>
+                <textarea style="width: 100%;" id="message" name="message" rows="10" cols="50"></textarea>
+            </div>
+            <br/>
+            <h2 style="font-size: 1.2em">Upload Your Identity Proof</h2>
+            <label
+              for="identity_proof"
+              style="display: block; margin-bottom: 5px"
+              >Google Drive Link:</label
+            >
+            <input
+              type="text"
+              id="identity_proof"
+              name="identity_proof"
+              required
+              style="margin-bottom: 10px"
+            /><br />
+            <small style="font-size: 0.8em"
+              >Example:
+              https://drive.google.com/file/d/your_id_proof_file_id/view</small
+            ><br /><br />
+
+            <h2 style="font-size: 1.2em">Upload Your CV</h2>
+            <label for="cv" style="display: block; margin-bottom: 5px"
+              >Google Drive Link:</label
+            >
+            <input
+              type="text"
+              id="cv"
+              name="cv"
+              required
+              style="margin-bottom: 10px"
+            /><br />
+            <small style="font-size: 0.8em"
+              >Example:
+              https://drive.google.com/file/d/your_cv_file_id/view</small
+            ><br /><br />
+
+            <h2 style="font-size: 1.2em">Your LinkedIn Profile</h2>
+            <label
+              for="linkedin_profile"
+              style="display: block; margin-bottom: 5px"
+              >LinkedIn Profile:</label
+            >
+            <input
+              type="url"
+              id="linkedin_profile"
+              name="linkedin_profile"
+              placeholder="https://www.linkedin.com/in/yourprofile"
+              required
+              style="margin-bottom: 10px"
+            /><br /><br />
+
+            <!-- Your existing HTML code for document upload -->
+            <input
+              type="button"
+              class="btn btn-primary"
+              value="Submit"
+              onclick="submitForm()"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script> -->
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script> -->
+    <!-- firebase link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+/* Basic styling for demonstration purposes */
+.menu-item {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.sub-sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.menu-item:hover .sub-sub-menu {
+    display: block;
+}
+
+/* Additional styling for demonstration purposes */
+a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    display: block;
+}
+
+li.menu-item:hover a {
+    background-color: #f0f0f0;
+}
